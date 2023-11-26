@@ -10,7 +10,6 @@ const createWeatherCard = (cityName, weatherItem, index) => {
     if (index == 0) 
     {
         return `
-        <div class="details">
             <div class="details">
                 <h2> ${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h2>
                 <h4>Temperature: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h4>
@@ -21,7 +20,6 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                 <img src=" https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather icon">
                 <h4>${weatherItem.weather[0].description}</h4>
             </div>
-        </div>
     `;
     }
     else
