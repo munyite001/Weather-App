@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Weather UI</title>
+</head>
+<body>
+    <h1>weather dashboard</h1>
+    <div class="container">
+        <div class="weather-input">
+            <h3>Enter a City Name</h3>
+            <input class="city-input" type="text" placeholder="E.g., New York, London, Tokyo">
+            <button class="search-btn">Search</button>
+            <div class="seperator"></div>
+            <button class="location-btn">Use Current Location</button>
+        </div>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>_____ ( _____ )</h2>
+                    <h4>Temperature: __°C</h4>
+                    <h4>Wind: __ M/s</h4>
+                    <h4>Humidity: __%</h4>
+                </div>
+                <div class="icon">
+                    <img src=" https://openweathermap.org/img/wn/10d@4x.png" alt="weather icon">
+                    <h4>_______________</h4>
+                </div>
+            </div>
+            <div class="days-forecast">
+                <h2>5-Day Forecast</h2>
+                <ul class="weather-cards">
+                    <li class="card">
+                        <h2>( _____ )</h2>
+                        <img src=" https://openweathermap.org/img/wn/10d@4x.png" alt="weather icon">
+                        <h4>Temp: __°C</h4>
+                        <h4>Wind: __ M/s</h4>
+                        <h4>Humidity: __%</h4>
+                    </li>
+                    <li class="card">
+                        <h2>( _____ )</h2>
+                        <img src=" https://openweathermap.org/img/wn/10d@4x.png" alt="weather icon">
+                        <h4>Temp: __°C</h4>
+                        <h4>Wind: __ M/s</h4>
+                        <h4>Humidity: __%</h4>
+                    </li>
+                    <li class="card">
+                        <h2>( _____ )</h2>
+                        <img src=" https://openweathermap.org/img/wn/10d@4x.png" alt="weather icon">
+                        <h4>Temp: __°C</h4>
+                        <h4>Wind: __ M/s</h4>
+                        <h4>Humidity: __%</h4>
+                    </li>
+                    <li class="card">
+                        <h2>( _____ )</h2>
+                        <img src=" https://openweathermap.org/img/wn/10d@4x.png" alt="weather icon">
+                        <h4>Temp: __°C</h4>
+                        <h4>Wind: __ M/s</h4>
+                        <h4>Humidity: __%</h4>
+                    </li>
+                    <li class="card">
+                        <h2>( _____ )</h2>
+                        <img src=" https://openweathermap.org/img/wn/10d@4x.png" alt="weather icon">
+                        <h4>Temp: __°C</h4>
+                        <h4>Wind: __ M/s</h4>
+                        <h4>Humidity: __%</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js" defer></script>
+</body>
+</html>
