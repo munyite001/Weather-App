@@ -1,4 +1,5 @@
 const searchButton = document.querySelector(".search-btn");
+const locationBtn = document.querySelector(".location-btn");
 const  cityInput = document.querySelector(".city-input");
 const currentWeatherCard = document.querySelector(".current-weather");
 const weatherCards = document.querySelector(".weather-cards");
@@ -90,4 +91,26 @@ const getCityCoordinates = () => {
         });
 }
 
+const getUserCoordinates = () => {
+    navigator.geolocation.getCurrentPosition(position => {
+        const { latitude, longitude } = position.coords;
+        const REVERSE_GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`;
+
+        fetch(REVERSE_GEOCODING_API_URL)
+        .then(res => res.json())
+        .then(data => {
+            const { name }  = data[0];
+            getWeatherData(name, latitude, longitude);
+        })
+        .catch(err => {
+            console.log(`An error occured while fetching the city name: ${err}`);
+        });
+    }, err => {
+        if (err.code === err.PERMISSION_DENIED) {
+            alert("Please allow location access to get your current location");
+        }
+    })
+}
+
 searchButton.addEventListener("click", getCityCoordinates);
+locationBtn.addEventListener("click", getUserCoordinates);
